@@ -386,8 +386,8 @@ class SOAPProxy:
             self.delegation_mode = config.delegation_mode
         #end GSI Additions
         
-    def invoke(self, method, args):
-        return self.__call(method, args, {})
+    def invoke(self, method, args, kw={}):
+        return self.__call(method, args, kw)
         
     def __call(self, name, args, kw, ns = None, sa = None, hd = None,
         ma = None):
